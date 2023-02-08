@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="800.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.completedController">
+    <center>
+        <ScrollPane BorderPane.alignment="CENTER">
+            <content>
+                <TableView fx:id="completedCourseTable" prefHeight="600.0" prefWidth="570"
+                           style="-fx-background-color: lightblue;">
+                    <columns>
+                        <TableColumn fx:id="codeColumn" prefWidth="200" text="Code">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="code"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="semesterColumn" prefWidth="200" text="Semester">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="semester"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="final" prefWidth="170" text="Grade">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="grade"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </content>
+        </ScrollPane>
+    </center>
+    <right>
+        <AnchorPane prefHeight="600.0" prefWidth="220" style="-fx-background-color: #68baba;"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="mainPage" onAction="#changeScene" layoutX="29.0" layoutY="540.0" mnemonicParsing="false" style="-fx-background-color: lightblue;"
+                        text="Main Page">
+                    <font>
+                        <Font name="Apple Braille" size="16.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="retake" onAction="#retakeCourse"   layoutX="7.0" layoutY="225.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="190"
+                        style="-fx-background-color: lightblue;" text="Retake Course">
+                    <font>
+                        <Font name="Apple Braille" size="17.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

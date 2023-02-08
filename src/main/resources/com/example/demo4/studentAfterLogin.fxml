@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml"  fx:controller="com.example.demo4.StudentAfterLoginController">
+   <top>
+      <AnchorPane prefHeight="165.0" prefWidth="800.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="welcomeText" layoutX="132.0" layoutY="63.0" prefHeight="40.0" prefWidth="483.0" textAlignment="CENTER">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="235.0" prefWidth="160.0" style="-fx-background-color: lightblue;">
+               <children>
+                  <AnchorPane layoutX="1.0" prefHeight="150.0" prefWidth="160.0" style="-fx-background-color: #84ddc1;">
+                     <children>
+                        <ImageView fitHeight="56.0" fitWidth="67.0" layoutX="53.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/icons8-name-64.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="profileButton" onAction="#changeToProfile" layoutX="34.0" layoutY="82.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Profile" textFill="WHITE">
+                           <font>
+                              <Font name="Apple SD Gothic Neo Regular" size="23.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="235.0" prefWidth="160.0" style="-fx-background-color: lightblue;">
+               <children>
+                  <AnchorPane prefHeight="150.0" prefWidth="160.0" style="-fx-background-color: #65ddc1;">
+                     <children>
+                        <Button fx:id="transcriptButton" onAction="#download" layoutX="11.0" layoutY="82.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Transcript" textFill="WHITE">
+                           <font>
+                              <Font name="Apple Braille" size="23.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="52.0" fitWidth="54.0" layoutX="51.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/icons8-report-card-50.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: lightblue;">
+               <children>
+                  <AnchorPane prefHeight="150.0" prefWidth="160.0" style="-fx-background-color: #42ddc1;">
+                     <children>
+                        <Button fx:id="CourseSelectionButton" onAction="#changeToSelection" layoutX="20.0" layoutY="64.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Course &#10;Selection" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Apple Braille Outline 6 Dot" size="23.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="59.0" fitWidth="73.0" layoutX="54.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/icons8-repository-64.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="235.0" prefWidth="160.0" style="-fx-background-color: lightblue;">
+               <children>
+                  <AnchorPane prefHeight="150.0" prefWidth="160.0" style="-fx-background-color: #00dcc1;">
+                     <children>
+                        <Button fx:id="ongoingButton" onAction="#changeToOngoing" layoutX="18.0" layoutY="64.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Ongoing &#10; Courses" textFill="WHITE">
+                           <font>
+                              <Font name="Apple Braille Outline 6 Dot" size="23.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="59.0" fitWidth="73.0" layoutX="44.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../image/icons8-grades-50.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </center>
+   <right>
+      <AnchorPane prefHeight="235.0" prefWidth="160.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="150.0" prefWidth="160.0" style="-fx-background-color: #20cdc1;">
+               <children>
+                  <Button fx:id="completedButton" onAction="#changeToCompleted" layoutX="11.0" layoutY="64.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Completed&#10; Courses" textFill="WHITE">
+                     <font>
+                        <Font name="Apple Braille Outline 6 Dot" size="23.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="59.0" fitWidth="73.0" layoutX="44.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/icons8-double-tick-64.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

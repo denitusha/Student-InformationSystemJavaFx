@@ -1,0 +1,4 @@
+Completed_course{id_student=IntegerProperty [value: 1], code='StringProperty [value: CEN123]', semester=IntegerProperty [value: 1], grade=FloatProperty [value: 64.0]}
+Completed_course{id_student=IntegerProperty [value: 1], code='StringProperty [value: CEN643]', semester=IntegerProperty [value: 1], grade=FloatProperty [value: 60.0]}
+Completed_course{id_student=IntegerProperty [value: 1], code='StringProperty [value: CEN123]', semester=IntegerProperty [value: 2], grade=FloatProperty [value: 3.5]}
+Completed_course{id_student=IntegerProperty [value: 1], code='StringProperty [value: CEN123]', semester=IntegerProperty [value: 3], grade=FloatProperty [value: 78.0]}

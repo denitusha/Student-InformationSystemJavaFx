@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="800.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.selectionController">
+    <center>
+        <ScrollPane BorderPane.alignment="CENTER">
+            <content>
+                <TableView fx:id="courseTable" prefHeight="600.0" prefWidth="648.0"
+                           style="-fx-background-color: lightblue;">
+                    <columns>
+                        <TableColumn fx:id="codeColumn" prefWidth="100.0" text="Code">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="code"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="nameColumn" prefWidth="88.0" text="Name">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="name"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="programColumn" prefWidth="84.0" text="Program">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="program"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="categoryColumn" text="Category">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="category"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="creditsColumn" prefWidth="73.0" text="Credits">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="credits"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="professorColumn" prefWidth="107.0" text="Professor">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="professor"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="syllabusColumn" minWidth="115.0" prefWidth="115.0" text="Syllabus">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="syllabus"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </content>
+        </ScrollPane>
+    </center>
+    <right>
+        <AnchorPane prefHeight="600.0" prefWidth="143.0" style="-fx-background-color: #68baba;"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="mainPage" onAction="#changeScene" layoutX="29.0" layoutY="540.0" mnemonicParsing="false" style="-fx-background-color: lightblue;"
+                        text="Main Page">
+                    <font>
+                        <Font name="Apple Braille" size="16.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="select" onAction="#insertCourse" layoutX="7.0" layoutY="225.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="127.0"
+                        style="-fx-background-color: lightblue;" text="Select Course">
+                    <font>
+                        <Font name="Apple Braille" size="16.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

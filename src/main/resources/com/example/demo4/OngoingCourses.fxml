@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="800.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.ongoingController">
+    <center>
+        <ScrollPane BorderPane.alignment="CENTER">
+            <content>
+                <TableView fx:id="currentCourseTable" prefHeight="600.0" prefWidth="648.0"
+                           style="-fx-background-color: lightblue;">
+                    <columns>
+                        <TableColumn fx:id="codeColumn" prefWidth="100.0" text="Code">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="code"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="midtermColumn" prefWidth="130" text="Midterm exam">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="midterm"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="final" prefWidth="120" text="Final exam">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="finalExam"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="midtermPercentageColumn" prefWidth="160" text="Midterm percentage">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="midtermPercentage"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="finalPercentageColumn" prefWidth="140" text="Final percentage">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="finalPercentage"/>
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </content>
+        </ScrollPane>
+    </center>
+    <right>
+        <AnchorPane prefHeight="600.0" prefWidth="143.0" style="-fx-background-color: #68baba;"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="mainPage" onAction="#changeScene" layoutX="29.0" layoutY="540.0" mnemonicParsing="false" style="-fx-background-color: lightblue;"
+                        text="Main Page">
+                    <font>
+                        <Font name="Apple Braille" size="16.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="delete" onAction="#removeCourse"  layoutX="7.0" layoutY="225.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="127.0"
+                        style="-fx-background-color: lightblue;" text="Remove Course">
+                    <font>
+                        <Font name="Apple Braille" size="14.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
